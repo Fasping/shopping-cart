@@ -5,7 +5,7 @@ import { useState } from "react";
 function App() {
   const [products] = useState(initialProducts);
 
-  const [filter, setFilter] = useState({
+  const [filters, setFilter] = useState({
     category: "all",
     minPrice: 0,
   });
