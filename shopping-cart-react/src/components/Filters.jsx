@@ -16,7 +16,7 @@ export function Filters({ onChange }) {
   const handleChangeCategory = (event) => {
     onChange((prevState) => ({
       ...prevState,
-      handleChangeCategory: event.target.value,
+      category: event.target.value,
     }));
   };
 
