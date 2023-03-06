@@ -6,7 +6,7 @@ import { useState } from "react";
 function App() {
   const [products] = useState(initialProducts);
 
-  const [filters, setFilter] = useState({
+  const [filters, setFilters] = useState({
     category: "all",
     minPrice: 0,
   });
@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <h1>Shopping Cart 🛒</h1>
-      <Header />
+      <Header changesFilter={setFilters} />
       <Products products={filteredProducts} />
     </div>
   );
