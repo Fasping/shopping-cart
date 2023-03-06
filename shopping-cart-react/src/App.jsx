@@ -1,4 +1,5 @@
 import { Products } from "./components/Products";
+import { Header } from "./components/Header";
 import { products as initialProducts } from "./mock/products.json";
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <div>
       <h1>Shopping Cart 🛒</h1>
+      <Header />
       <Products products={filteredProducts} />
     </div>
   );
