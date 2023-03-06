@@ -10,7 +10,7 @@ function App() {
     minPrice: 0,
   });
 
-  const filteredProducts = (products) => {
+  const filterProducts = (products) => {
     return products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
@@ -19,10 +19,12 @@ function App() {
     });
   };
 
+  const filteredProducts = filterProducts(products);
+
   return (
     <div>
       <h1>Shopping Cart 🛒</h1>
-      <Products products={filteredProducts(products)} />
+      <Products products={filteredProducts} />
     </div>
   );
 }
