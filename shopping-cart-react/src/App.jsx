@@ -2,6 +2,7 @@ import { Products } from "./components/Products";
 import { Header } from "./components/Header";
 import { products as initialProducts } from "./mock/products.json";
 import { useState } from "react";
+import { Footer } from "./components/Footer";
 
 function useFilters() {
   const [filters, setFilters] = useState({
@@ -30,6 +31,7 @@ function App() {
       <h1> Shopping Cart 🛒</h1>
       <Header changesFilter={setFilters} />
       <Products products={filteredProducts} />
+      <Footer />
     </div>
   );
 }
