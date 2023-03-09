@@ -6,7 +6,7 @@
   font-weight: 700;
 }
 
-.filter > div {
+.filters > div {
   display: flex;
   gap: 1rem;
 }
