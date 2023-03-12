@@ -1,10 +1,12 @@
 import { Products } from "./components/Products";
 import { Header } from "./components/Header";
+import { Cart } from "./components/Cart";
 import { products as initialProducts } from "./mock/products.json";
 import { useState } from "react";
 import { Footer } from "./components/Footer";
 import { IS_DEVELOPMENT } from "./config";
 import { useFilters } from "./hooks/useFilters";
+import { CartProvider } from "./context/cart";
 
 function App() {
   const [products] = useState(initialProducts);
@@ -13,11 +15,12 @@ function App() {
   const filteredProducts = filterProducts(products);
 
   return (
-    <div>
+    <CartProvider>
       <Header />
+      <Cart />
       <Products products={filteredProducts} />
       {IS_DEVELOPMENT && <Footer />}
-    </div>
+    </CartProvider>
   );
 }
 
