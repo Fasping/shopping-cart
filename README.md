@@ -1,4 +1,4 @@
-# Shopping Cart 🛒 ( work in progress)
+# Shopping Cart 🛒 
 
 Introducing the most entertaining shopping cart this side of GitHub, complete with all the bells and whistles of useContext, useReducer, and useId.
 
